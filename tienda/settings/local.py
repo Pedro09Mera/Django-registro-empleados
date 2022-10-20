@@ -1,4 +1,4 @@
-from msilib.schema import Media
+#from msilib.schema import Media
 from .base import *
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

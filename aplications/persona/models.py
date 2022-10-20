@@ -1,19 +1,19 @@
-import cmath
-from distutils.command.upload import upload
-from email.mime import image
-from msilib import FCICreate
-from pickle import TRUE
-from tabnanny import verbose
-from tkinter import FIRST
+#import cmath
+#from distutils.command.upload import upload
+#from email.mime import image
+#from msilib import FCICreate
+#from pickle import TRUE
+#from tabnanny import verbose
+#from tkinter import FIRST
 from django.db import models
 
 from aplications.departamento.models import Departamento
-from ckeditor.fields import RichTextField
-# Create your models here.
+
+# Createur models here.
+
 
 class Habilidades(models.Model):
     habilidad = models.CharField('habilidad', max_length=50)
-
     class meta:
         verbose_name = 'Habilidad'
         verbose_name_plural  = 'Habilidades Empleado'
@@ -39,11 +39,11 @@ class Empleado(models.Model):
     }
     first_name = models.CharField('Nombres', max_length=60)
     last_name = models.CharField('Apellidos', max_length=60)
-    full_name = models.CharField('Nombres Completos', max_length=60, blank=TRUE)
+    full_name = models.CharField('Nombres Completos', max_length=120, blank=True)
     job = models.CharField('trabajo', max_length=20, choices=JOB_CHOICES)
     departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
     habilidades = models.ManyToManyField(Habilidades)
-    hoja_vida = RichTextField()
+
 
     class Meta:
         verbose_name = 'Mi Empleado'
