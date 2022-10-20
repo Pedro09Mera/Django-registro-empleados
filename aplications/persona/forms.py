@@ -1,6 +1,6 @@
-from pyclbr import Class
-from socket import fromshare
-from tkinter import Widget
+#from pyclbr import Class
+#from socket import fromshare
+#from tkinter import Widget
 from django import forms
 from .models import Empleado
 

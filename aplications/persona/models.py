@@ -1,14 +1,14 @@
-import cmath
-from distutils.command.upload import upload
-from email.mime import image
-from msilib import FCICreate
-from pickle import TRUE
-from tabnanny import verbose
-from tkinter import FIRST
+#import cmath
+#from distutils.command.upload import upload
+#from email.mime import image
+#from msilib import FCICreate
+#from pickle import TRUE
+#from tabnanny import verbose
+#from tkinter import FIRST
 from django.db import models
 
 from aplications.departamento.models import Departamento
-from ckeditor.fields import RichTextField
+#from ckeditor.fields import RichTextField
 # Create your models here.
 
 class Habilidades(models.Model):
@@ -43,7 +43,7 @@ class Empleado(models.Model):
     job = models.CharField('trabajo', max_length=20, choices=JOB_CHOICES)
     departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
     habilidades = models.ManyToManyField(Habilidades)
-    hoja_vida = RichTextField()
+#    hoja_vida = RichTextField()
 
     class Meta:
         verbose_name = 'Mi Empleado'
