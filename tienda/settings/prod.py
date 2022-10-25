@@ -2,7 +2,11 @@ from .base import *
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = [159.223.115.154]
+=======
+ALLOWED_HOSTS = ['159.223.115.154']
+>>>>>>> 9b6489ee0c3de29f6dd85b062d6d35dad0532cdc
 
 DATABASES = {
     'default': {
