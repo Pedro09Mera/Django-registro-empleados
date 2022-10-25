@@ -1,5 +1,5 @@
 from .base import *
-# SECURITY WARNING: don't run with debug turned on in production!
+## SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['159.223.115.154']
