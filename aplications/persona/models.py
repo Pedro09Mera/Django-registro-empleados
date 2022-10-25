@@ -8,12 +8,17 @@
 from django.db import models
 
 from aplications.departamento.models import Departamento
+<<<<<<< HEAD
+
+# Createur models here.
+
+=======
 #from ckeditor.fields import RichTextField
 # Create your models here.
+>>>>>>> a3abf924def9d4760f6c57c892ee8f40fac00216
 
 class Habilidades(models.Model):
     habilidad = models.CharField('habilidad', max_length=50)
-
     class meta:
         verbose_name = 'Habilidad'
         verbose_name_plural  = 'Habilidades Empleado'
@@ -39,11 +44,15 @@ class Empleado(models.Model):
     }
     first_name = models.CharField('Nombres', max_length=60)
     last_name = models.CharField('Apellidos', max_length=60)
-    full_name = models.CharField('Nombres Completos', max_length=60, blank=TRUE)
+    full_name = models.CharField('Nombres Completos', max_length=120, blank=True)
     job = models.CharField('trabajo', max_length=20, choices=JOB_CHOICES)
     departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
     habilidades = models.ManyToManyField(Habilidades)
+<<<<<<< HEAD
+
+=======
 #    hoja_vida = RichTextField()
+>>>>>>> a3abf924def9d4760f6c57c892ee8f40fac00216
 
     class Meta:
         verbose_name = 'Mi Empleado'
